@@ -24,7 +24,9 @@ void incrementMeals(int userID) {
 }
 
 void decrementMeals(int userID) {
-  users[userID].meals--;
+  if (users[userID].meals > 0) {
+    users[userID].meals--;
+  }
 }
 
 //Figure out how to print users based on struct
